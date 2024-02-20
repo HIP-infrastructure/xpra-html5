@@ -328,6 +328,7 @@ function rdecode_string(dec) {
 function Uint8ToString(u8a){
 	const CHUNK_SZ = 0x8000;
 	const c = [];
+	console.log("packet: ", u8a);
 	for (let i=0; i < u8a.length; i+=CHUNK_SZ) {
 		c.push(String.fromCharCode.apply(null, u8a.subarray(i, i+CHUNK_SZ)));
 	}
